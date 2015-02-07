@@ -18,12 +18,20 @@
                 var mapOptions =
                 {
                     credentials: "AsR2QA0NZcWSui-nFCb50_nSCfoJoSenaR-R3Ha5heqM6OkRVZw-IP2Lml7F2E-K",
-                    center: new Microsoft.Maps.Location(lat, long),
+                    center: new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long),
                     mapTypeId: Microsoft.Maps.MapTypeId.road,
                     zoom:17
                 };
 
                 map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), mapOptions);
+
+                var center = map.getCenter();
+
+                // Add a pin to the center of the map
+                var pin = new Microsoft.Maps.Pushpin(center, { text: '1' });
+                map.entities.push(pin);
+
+                mapDetails.map = map;
             }
         },
     });

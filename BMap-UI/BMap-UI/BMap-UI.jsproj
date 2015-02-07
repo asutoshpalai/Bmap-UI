@@ -297,6 +297,7 @@
     <Content Include="pages\hub\hubPhone.css" />
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\hub\hub.js" />
+    <Content Include="pages\hub\location.js" />
     <Content Include="pages\hub\SearchPage.html" />
     <Content Include="pages\hub\SearchPage.js" />
     <Content Include="pages\hub\TrackerPage.html" />
@@ -312,6 +313,10 @@
     <Content Include="css\ui-themed.css" />
     <Content Include="css\ui-themed.theme-dark.css" />
     <Content Include="css\ui-themed.theme-light.css" />
+    <Content Include="pages\page.css" />
+    <Content Include="pages\page.html" />
+    <Content Include="pages\page.js" />
+    <Content Include="sign.html" />
     <PRIResource Include="strings\en-US\resources.resjson" />
   </ItemGroup>
   <ItemGroup>
