@@ -293,6 +293,7 @@
     <Content Include="images\gray.png" />
     <Content Include="js\data.js" />
     <Content Include="js\default.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="js\navigator.js" />
     <Content Include="pages\hub\hubPhone.css" />
     <Content Include="pages\hub\hub.html" />
@@ -313,9 +314,13 @@
     <Content Include="css\ui-themed.css" />
     <Content Include="css\ui-themed.theme-dark.css" />
     <Content Include="css\ui-themed.theme-light.css" />
-    <Content Include="pages\page.css" />
-    <Content Include="pages\page.html" />
-    <Content Include="pages\page.js" />
+    <Content Include="pages\sign\hub.html" />
+    <Content Include="pages\sign\hub.js" />
+    <Content Include="pages\sign\hubPhone.css" />
+    <Content Include="pages\sign\signUpPage.html" />
+    <Content Include="pages\sign\signUpPage.js" />
+    <Content Include="pages\sign\signInPage.js" />
+    <Content Include="pages\sign\signInPage.html" />
     <Content Include="sign.html" />
     <PRIResource Include="strings\en-US\resources.resjson" />
   </ItemGroup>

@@ -8,11 +8,20 @@
         ready: function (element, options) {
             options = options || {};
 
-            var listView = element.querySelector(".itemslist").winControl;
-
-            listView.itemDataSource = options.dataSource;
-            listView.layout = options.layout;
-            listView.oniteminvoked = options.oniteminvoked;
+            if (WinJS.Application.sessionState.frndlist == "0") {
+                var friendlist = "Sorry! Unable to fetch your friendlist.";
+            }
+            else {
+                var details = WinJS.Application.sessionState.frndlist;
+                var frndlist = '<div>';
+                for (var i = 0 ; i < details['people'].size() ; i++) {
+                    frndlist += '<div>';
+                    frndlist += details['people'][i]['name'];
+                    frndlist += '</div>';
+                }
+                frndlist += '</div>';
+            }
+            $("#friends").append(friendlist);
         }
     });
 

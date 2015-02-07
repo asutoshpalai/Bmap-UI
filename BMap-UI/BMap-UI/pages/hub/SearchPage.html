@@ -2,19 +2,23 @@
 <html>
 <head>
     <title></title>
-    <script src="/pages/hub/FriendsPage.js"></script>
+    <script src="/pages/hub/SearchPage.js"></script>
 </head>
 <body>
-    <div class="fragment Friendspage">
+    <div class="fragment SearchPage">
         <section aria-label="Main content" role="main">
-            <img src="/images/gray.png" />
-            <div class="title label-extralarge" data-win-res="{ textContent: 'FriendsTitle' }"></div>
-            <div class="subtext label-medium" data-win-res="{ textContent: 'FriendsSubtext' }"></div>
-            <div class="label-mediummid">
-                <span data-win-res="{ textContent: 'FriendsDescription' }"></span>
-                <span data-win-res="{ textContent: 'FriendsDescription' }"></span>
-                <span data-win-res="{ textContent: 'FriendsDescription' }"></span>
+            <form id="finduser" action="POST">
+            <div>
+                <!--Search for user-->
+                <span>Enter name of friend</span>
+                <input type="text" id="user" name="friend" />
+                <input type="submit" name="submit" value="Search" />
             </div>
+            <div id="searchresult">
+                <!--User Details-->
+
+            </div>
+            </form>
         </section>
     </div>
 </body>

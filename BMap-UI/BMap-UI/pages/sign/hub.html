@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>User Login</title>
+
+    <link href="/css/phone.css" rel="stylesheet" />
+    <link href="/pages/sign/hubphone.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/sign/hub.js"></script>
+    <script src="/pages/sign/signInPage.js"></script>
+    <script src="/pages/sign/signUpPage.js"></script>
+</head>
+<body>
+    <div class="hubpage fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="titlearea backbutton" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">User Login</span>
+            </h1>
+        </header>
+
+        <section aria-label="Main content" role="main">
+            <!-- Customize the Hub control by modifying the HubSection controls here. -->
+
+            <div class="hub" data-win-control="WinJS.UI.Pivot">
+
+                <div class="signIn section"
+                     data-win-control="WinJS.UI.PivotItem"
+                     data-win-options="{ isHeaderStatic: true }"
+                     data-win-res="{ winControl: {'header': 'Sign In'} }">
+                    <div class="sectioncontrol"
+                         id="signIncontenthost"
+                         data-win-control="HubApps_SectionControls.signInControl">
+                    </div>
+                </div>
+
+                <div class="signUp section"
+                     data-win-control="WinJS.UI.PivotItem"
+                     data-win-options="{ isHeaderStatic: true }"
+                     data-win-res="{ winControl: {'header': 'Sign Up'} }">
+                    <div class="sectioncontrol"
+                         id="signUpcontenthost"
+                         data-win-control="HubApps_SectionControls.signUpControl">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>
