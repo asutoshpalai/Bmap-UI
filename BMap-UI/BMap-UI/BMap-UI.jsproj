@@ -321,7 +321,6 @@
     <Content Include="pages\sign\signUpPage.js" />
     <Content Include="pages\sign\signInPage.js" />
     <Content Include="pages\sign\signInPage.html" />
-    <Content Include="sign.html" />
     <PRIResource Include="strings\en-US\resources.resjson" />
   </ItemGroup>
   <ItemGroup>
