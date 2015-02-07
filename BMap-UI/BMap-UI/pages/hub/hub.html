@@ -12,6 +12,32 @@
     <script src="/pages/hub/TrackerPage.js"></script>
     <script src="/pages/hub/FriendsPage.js"></script>
     <script src="/pages/hub/section4Page.js"></script>
+
+    <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript//js/veapicore.js"></script>
+    <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript//js/veapiModules.js"></script>
+
+    <script type="text/javascript">
+        function getLocation() {
+
+            console.log("Geolocation.");
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(setPosition);
+            } else {
+                console.log("Geolocation is not supported by this browser.");;
+            }
+        }
+
+        function setPosition(position) {
+            lat = position.coords.latitude;
+            long = position.coords.longitude;
+
+            console.log("Got user's Loaciton");
+        }
+
+        lat = 29.8644;
+        long = 77.8964;
+
+    </script>
 </head>
 <body>
     <div class="hubpage fragment">
