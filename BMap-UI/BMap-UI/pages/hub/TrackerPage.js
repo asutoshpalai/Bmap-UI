@@ -28,14 +28,34 @@
                 var center = map.getCenter();
 
                 // Add a pin to the center of the map
-                var pin = new Microsoft.Maps.Pushpin(center, { text: '1' });
-                map.entities.push(pin);
+                
+
+               
 
                 mapDetails.map = map;
+
+
+                mapDetails.updateMap = function () {
+                    mapDetails.map.entities.clear();
+
+                    var pin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long), { text: 'Me' });
+
+                    map.entities.push(pin);
+
+                    for (p in user.disp) {
+                        var loc = new Microsoft.Maps.Location(p.latitude, p.longitude);
+                        pin = new Microsoft.Maps.Pushpin(loc, { text: p.name });
+
+                    }
+                };
+
+                mapDetails.updateMap();
+
             }
         },
     });
 
+   
     // The following lines expose this control constructor as a global. 
     // This lets you use the control as a declarative control inside the 
     // data-win-control attribute. 

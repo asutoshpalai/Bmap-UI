@@ -110,7 +110,8 @@ setInterval(function () {
     });
     */
     if (mapDetails.map) {
-        mapDetails.map.setView({ center: new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long) });
+        mapDetails.updateMap();
+        //mapDetails.map.setView({ center: new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long) });
     }
 
 }, 30000);
