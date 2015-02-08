@@ -19,7 +19,7 @@
                 {
                     credentials: "AsR2QA0NZcWSui-nFCb50_nSCfoJoSenaR-R3Ha5heqM6OkRVZw-IP2Lml7F2E-K",
                     center: new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long),
-                    mapTypeId: Microsoft.Maps.MapTypeId.road,
+                    mapTypeId: Microsoft.Maps.MapTypeId.arial,
                     zoom:17
                 };
 
@@ -43,9 +43,12 @@
                     map.entities.push(pin);
                     var p;
                     for (p in user.disp) {
-                        var loc = new Microsoft.Maps.Location(p.latitude, p.longitude);
-                        pin = new Microsoft.Maps.Pushpin(loc, { text: p.name });
+                        var loc = new Microsoft.Maps.Location(user.disp[p].latitude, user.disp[p].longitude);
+                        console.log(p);
+                        console.log(loc);
 
+                        pin = new Microsoft.Maps.Pushpin(loc, { text: user.disp[p].name });
+                        map.entities.push(pin);
                     }
                 };
 
