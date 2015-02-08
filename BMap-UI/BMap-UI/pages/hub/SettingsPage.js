@@ -40,16 +40,14 @@
 
             $("#logout").submit(function (event) {
                 event.preventDefault();
-                var x = domain + "/setprivacy";
-                var d = {
+                var x = domain + "/logout";
 
-                }
-                var posting = $.post(x);
+                var posting = $.post(x, '');
                 posting.done(function (data) {
-
+                    WinJS.Navigation.navigate('/pages/sign/hub.html');
 
                 });
-            }
+            });
             
         }//end of ready function
     });

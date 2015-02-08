@@ -30,6 +30,7 @@
                       password: $('#pass').val()
                   }
                   var x = domain + "/login";
+                  console.log(x);
                   var posting = $.post(x, d);
                   posting.done(function (data) {
                       var response = $.parseJSON(data);
@@ -38,6 +39,7 @@
                           case '0':
                               x = domain + "/flist";
                               var posting = $.post(x, '');
+                              console.log("nnnnnnnnnn");
                               posting.done(function (data) {
                                   var details = $.parseJSON(data);
                                   var check = details['result'];
@@ -50,6 +52,7 @@
                                   }
                                   user.people = details['people'];
                               });
+                              console.log("mmmmmmmmmmmmm");
                               user.userid = response['userid'];
                               user.name = response['name'];
                               user.privacy = response['privacy'];
