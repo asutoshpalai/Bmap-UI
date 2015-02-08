@@ -1,24 +1,27 @@
 ﻿(function () {
     "use strict";
 
-    var ControlConstructor = WinJS.UI.Pages.define("/pages/hub/section3Page.html", {
+    var ControlConstructor = WinJS.UI.Pages.define("/pages/hub/FriendsPage.html", {
         // This function is called after the page control contents 
         // have been loaded, controls have been activated, and 
         // the resulting elements have been parented to the DOM. 
         ready: function (element, options) {
             options = options || {};
-
-            if (WinJS.Application.sessionState.frndlist == "0") {
-                var frndlist = "Sorry! Unable to fetch your friendlist.";
+            var frndlist = "";
+           if (WinJS.Application.sessionState.frndlist == "0") {
+                frndlist = "Sorry! Unable to fetch your friendlist.";
             }
-            else {
-                var details = WinJS.Application.sessionState.frndlist;
-                details = $.parseJSON(details);
-                var frndlist = '<div>';
-                for (var i = 0 ; i < details['people'].length ; i++) {
+           else {
+
+               
+               var details = WinJS.Application.sessionState.frndlist;
+               console.log(details);
+                frndlist = '<div>';
+                for (var i = 0 ; i < user.people.length ; i++) {
                     frndlist += '<div>';
                     frndlist += details['people'][i]['name'];
                     frndlist += '</div>';
+                    console.log(details);
                 }
                 frndlist += '</div>';
             }
@@ -31,6 +34,6 @@
     // data-win-control attribute. 
 
     WinJS.Namespace.define("HubApps_SectionControls", {
-        Section3Control: ControlConstructor
+        FriendsControl: ControlConstructor
     });
 })();
