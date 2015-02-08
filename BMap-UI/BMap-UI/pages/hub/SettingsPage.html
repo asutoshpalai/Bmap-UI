@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+</head>
+<body>
+    <form method="POST" id="logout">
+        <input type="submit" value="LogOut" />
+        <div id="comment"></div>
+    </form>
+</body>
+</html>
+<script>
+    $('#document').ready(function () { $('#login').submit = null; });
+    $("#login").submit(function (event) {
+        event.preventDefault();
+        var x = domain + "/logout";
+        var posting = $.post(x, '');
+        posting.done(function (data) {
+            var response = $.parseJSON(data);
+            var result = response['result'];
+            if (result == 0) {
+                //Location of sign/hub file
+            }
+            else {
+                document.getElementById("comment").innerHTML = "Error signing out...";
+            }
+        });
+    });

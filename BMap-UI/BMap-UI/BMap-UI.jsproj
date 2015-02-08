@@ -303,6 +303,7 @@
     <Content Include="pages\hub\RequestsPage.js" />
     <Content Include="pages\hub\SearchPage.html" />
     <Content Include="pages\hub\SearchPage.js" />
+    <Content Include="pages\hub\SettingsPage.html" />
     <Content Include="pages\hub\TrackerPage.html" />
     <Content Include="pages\hub\TrackerPage.js" />
     <Content Include="pages\hub\FriendsPage.html" />

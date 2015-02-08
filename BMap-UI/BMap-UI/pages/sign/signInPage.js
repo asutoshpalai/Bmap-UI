@@ -53,23 +53,20 @@
                               user.userid = response['userid'];
                               user.name = response['name'];
                               user.privacy = response['privacy'];
-
-
                               //x = domain + "/frequests";
                               //var posting = $.post(x, '' );
                               //posting.done(function (data) {
-                              //    var notidetails = $.parseJSON(data);
-                              //    var check = notidetails['result'];
-                                  
+                              //    var details = $.parseJSON(data);
+                              //    var check = details['result'];
+                              //    var privacy = response['privacy'];
                               //    if (check == '0') {
-                              //        WinJS.Application.sessionState.requests = notidetails;
+                              //        WinJS.Application.sessionState.requests = details;
                               //    }
                               //    else {
                               //        WinJS.Application.sessionState.requests = 0;
                               //    }
-                              //    user.people = notidetails['people'];
+                              //    user.people = details['people'];
                               //});
-
                               WinJS.Navigation.navigate('/pages/hub/hub.html');
                               break;
                           case '1':
