@@ -46,8 +46,8 @@ function getPositionHandler(pos) {
 
     //sending self location
     var x = domain + "/updateloc";
-    //var posting = $.post(x, { lat: mapDetails.lat, lon: mapDetails.long });
-    var posting = $.post(x, { lat: 29.8644, lon: 77.8964 });
+    var posting = $.post(x, { lat: mapDetails.lat, lon: mapDetails.long });
+    //var posting = $.post(x, { lat: 29.8644, lon: 77.8964 });
     posting.done(function (data) {
 
         //console.log(data);
