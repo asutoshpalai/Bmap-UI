@@ -36,7 +36,7 @@ function getLoc() {
 
 function getPositionHandler(pos) {
 
-    console.log("Non-html5 meathod sucessful");
+    //console.log("Non-html5 meathod sucessful");
     mapDetails.lat= pos.coordinate.point.position.latitude;
     mapDetails.long = pos.coordinate.point.position.longitude;
 
@@ -50,7 +50,7 @@ function getPositionHandler(pos) {
     //var posting = $.post(x, { lat: 29.8644, lon: 77.8964 });
     posting.done(function (data) {
 
-        console.log(data);
+        //console.log(data);
         var result = $.parseJSON(data);
 
         switch (result['result']) {
@@ -114,7 +114,7 @@ function getFriendsLocation() {
     var posting = $.post(x);
     posting.done(function (data) {
 
-        console.log(data);
+       // console.log(data);
         var result = $.parseJSON(data);
 
         switch (result['result']) {

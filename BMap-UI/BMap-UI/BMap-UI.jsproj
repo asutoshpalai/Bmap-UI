@@ -299,8 +299,8 @@
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\hub\hub.js" />
     <Content Include="pages\hub\location.js" />
-    <Content Include="pages\hub\NotifiactionPage.js" />
-    <Content Include="pages\hub\NotificationPage.html" />
+    <Content Include="pages\hub\RequestsPage.html" />
+    <Content Include="pages\hub\RequestsPage.js" />
     <Content Include="pages\hub\SearchPage.html" />
     <Content Include="pages\hub\SearchPage.js" />
     <Content Include="pages\hub\SettingsPage.html" />

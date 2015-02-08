@@ -1,6 +1,8 @@
 ﻿(function () {
     "use strict";
 
+    console.log("HERE");
+
     var ControlConstructor = WinJS.UI.Pages.define("/pages/hub/section4Page.html", {
         // This function is called after the page control contents 
         // have been loaded, controls have been activated, and 
