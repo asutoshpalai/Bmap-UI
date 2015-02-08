@@ -299,7 +299,8 @@
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\hub\hub.js" />
     <Content Include="pages\hub\location.js" />
-    <Content Include="pages\hub\notifications.js" />
+    <Content Include="pages\hub\NotifiactionPage.js" />
+    <Content Include="pages\hub\NotificationPage.html" />
     <Content Include="pages\hub\SearchPage.html" />
     <Content Include="pages\hub\SearchPage.js" />
     <Content Include="pages\hub\TrackerPage.html" />
@@ -316,7 +317,6 @@
     <Content Include="css\ui-themed.theme-dark.css" />
     <Content Include="css\ui-themed.theme-light.css" />
     <Content Include="pages\sign\hub.css" />
-    <Content Include="pages\sign\notifications.html" />
     <Content Include="pages\sign\signInPage.css" />
     <Content Include="pages\sign\hub.html" />
     <Content Include="pages\sign\hub.js" />

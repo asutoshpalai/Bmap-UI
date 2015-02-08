@@ -25,6 +25,9 @@
 	"signUp": "Sign Up",
     "signUpDescription": "",
 
+	"Notification": "Notifications",
+    "NotificationDescription": "",
+
 
     "DescriptionText": "Lorem ipsum dolor sit amet:",
     "SectionSubtitle": "Section subtitle"

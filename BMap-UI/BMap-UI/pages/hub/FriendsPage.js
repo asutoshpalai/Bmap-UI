@@ -18,7 +18,7 @@
                console.log(details);
                 frndlist = '<div>';
                 for (var i = 0 ; i < user.people.length ; i++) {
-                    frndlist += '<div>';
+                    frndlist += '<div class="label-medium">';
                     frndlist += details['people'][i]['name'];
                     frndlist += '</div>';
                     console.log(details);

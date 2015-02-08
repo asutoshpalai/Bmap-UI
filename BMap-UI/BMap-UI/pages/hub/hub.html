@@ -12,6 +12,7 @@
     <script src="/pages/hub/TrackerPage.js"></script>
     <script src="/pages/hub/FriendsPage.js"></script>
     <script src="/pages/hub/section4Page.js"></script>
+    <script src="/pages/hub/NotificationPage.js"></script>
 
     <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript//js/veapicore.js"></script>
     <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript//js/veapiModules.js"></script>
@@ -53,6 +54,10 @@
                              layout: {type: WinJS.UI.ListLayout},
                              oniteminvoked: select('.pagecontrol').winControl.FriendsItemNavigate
                          }"></div>
+                </div>
+
+                <div class="Notification section" data-win-control="WinJS.UI.PivotItem" data-win-res="{ winControl: {'header': 'Notification'} }">
+                    <div class="Notificationcontenthost sectioncontrol" id="Notificationcontenthost" data-win-control="HubApps_SectionControls.NotificationControl"></div>
                 </div>
 
             </div>
