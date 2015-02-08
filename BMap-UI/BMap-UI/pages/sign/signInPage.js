@@ -37,7 +37,7 @@
                       switch (result) {
                           case '0':
                               x = domain + "/flist";
-                              var posting = $.post(x);
+                              var posting = $.post(x, '');
                               posting.done(function (data) {
                                   var details = $.parseJSON(data);
                                   var check = details['result'];
@@ -48,14 +48,26 @@
                                   else {
                                       WinJS.Application.sessionState.frndlist = 0;
                                   }
-
-                                  
                                   user.people = details['people'];
-                                  WinJS.Navigation.navigate('/pages/hub/hub.html');
                               });
                               user.userid = response['userid'];
                               user.name = response['name'];
                               user.privacy = response['privacy'];
+                              //x = domain + "/frequests";
+                              //var posting = $.post(x, '' );
+                              //posting.done(function (data) {
+                              //    var details = $.parseJSON(data);
+                              //    var check = details['result'];
+                              //    var privacy = response['privacy'];
+                              //    if (check == '0') {
+                              //        WinJS.Application.sessionState.requests = details;
+                              //    }
+                              //    else {
+                              //        WinJS.Application.sessionState.requests = 0;
+                              //    }
+                              //    user.people = details['people'];
+                              //});
+                              WinJS.Navigation.navigate('/pages/hub/hub.html');
                               break;
                           case '1':
                               $("#error").html("No such user exist or passwords do not match.");

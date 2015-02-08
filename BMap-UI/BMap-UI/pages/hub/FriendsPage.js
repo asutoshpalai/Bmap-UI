@@ -9,19 +9,20 @@
             options = options || {};
 
             if (WinJS.Application.sessionState.frndlist == "0") {
-                var friendlist = "Sorry! Unable to fetch your friendlist.";
+                var frndlist = "Sorry! Unable to fetch your friendlist.";
             }
             else {
                 var details = WinJS.Application.sessionState.frndlist;
+                details = $.parseJSON(details);
                 var frndlist = '<div>';
-                for (var i = 0 ; i < details['people'].size() ; i++) {
+                for (var i = 0 ; i < details['people'].length ; i++) {
                     frndlist += '<div>';
                     frndlist += details['people'][i]['name'];
                     frndlist += '</div>';
                 }
                 frndlist += '</div>';
             }
-            $("#friends").append(friendlist);
+            $("#friends").html(frndlist);
         }
     });
 
