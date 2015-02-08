@@ -1,4 +1,6 @@
-﻿(function () {
+﻿console.log("sesefgs");
+
+(function () {
     "use strict";
 
     var ControlConstructor = WinJS.UI.Pages.define("/pages/hub/RequestsPage.html", {
@@ -6,26 +8,50 @@
         // have been loaded, controls have been activated, and 
         // the resulting elements have been parented to the DOM. 
         ready: function (element, options) {
+            console.log("seggjise");
+            console.log(element);
+            
             options = options || {};
             var frndlist = "";
-            if (WinJS.Application.sessionState.frndlist == "0") {
-                frndlist = "Sorry! Unable to fetch your friendlist.";
+            console.log((WinJS.Application.sessionState.requestr) == 0);
+            if (WinJS.Application.sessionState.requestr==0) {
+                console.log("eeeeeee");
+                frndlist = "Sorry! Unable to fetch your friend requests.";
             }
             else {
 
 
-                var details = WinJS.Application.sessionState.frndlist;
-                console.log(details);
+                var detailsr = WinJS.Application.sessionState.requestsr;
+                console.log("jjjjjjjjjjjjjj");
+                console.log(detailsr);
                 frndlist = '<div>';
-                for (var i = 0 ; i < user.people.length ; i++) {
+                for (var i = 0 ; i < detailsr.people.length ; i++) {
                     frndlist += '<div class="label-medium">';
-                    frndlist += details['people'][i]['name'];
+                    frndlist += detailsr['people'][i]['name'];
+                    frndlist += '<br/><button class="accbutton" id="' + 'a' + i + '">Accept Request</button>';
                     frndlist += '</div>';
-                    console.log(details);
+                    console.log(detailsr);
                 }
                 frndlist += '</div>';
             }
-            $("#Requests").html(frndlist);
+            console.log(frndlist);
+            element.innerHTML = frndlist;
+            var buttons = document.getElementsByClassName('accbutton');
+            for (var i = 0 ; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', function (e) {
+                    var el = e.target;
+                    console.log(e.target);
+                    var x = domain + "/accfr";
+                    var code = parseInt(e.target.id.substring(1, e.target.id.length));
+                    var posting = $.post(x, 'user2=' + detailsr.people[code].userid);
+
+                    posting.done(function (data) {
+                        document.getElementById('a' + code).innerHTML = 'Friends';
+                        document.getElementById('a' + code).disabled = true;
+                    });
+                    
+                }, false);
+            }
         }
     });
 
