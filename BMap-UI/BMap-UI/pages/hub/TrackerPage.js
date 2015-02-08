@@ -41,7 +41,7 @@
                     var pin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long), { text: 'Me' });
 
                     map.entities.push(pin);
-
+                    var p;
                     for (p in user.disp) {
                         var loc = new Microsoft.Maps.Location(p.latitude, p.longitude);
                         pin = new Microsoft.Maps.Pushpin(loc, { text: p.name });
