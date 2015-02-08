@@ -93,6 +93,22 @@ function getStatusString(locStatus) {
 setInterval(function () {
     getLoc();
 
+    /*
+    var x = domain + "/getlocs" ;
+    var posting = $.post(x);
+    posting.done(function (data) {
+
+        console.log(data);
+        var result = $.parseJSON(data);
+
+        switch (result['result']) {
+            case '0': user.disp = result['people'];
+                break;
+            case '7': console.log("Error");
+                break;
+        }
+    });
+    */
     if (mapDetails.map) {
         mapDetails.map.setView({ center: new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long) });
     }
