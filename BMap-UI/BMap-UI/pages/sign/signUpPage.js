@@ -31,7 +31,17 @@
             var x = domain + "/signup";
             var posting = $.post(x, d);
             posting.done(function (data) {
-                $response = $.parseJSON(data);
+                var response = $.parseJSON(data);
+
+                switch(response['result'])
+                {
+                    case '0':
+                        break;
+                    case '1':
+                        break;
+                    case '7':
+                        break;
+                }
             });
             posting.fail(function (a) {
                 //document.write(a);
