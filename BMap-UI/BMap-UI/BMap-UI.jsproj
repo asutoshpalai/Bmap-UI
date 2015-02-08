@@ -314,6 +314,8 @@
     <Content Include="css\ui-themed.css" />
     <Content Include="css\ui-themed.theme-dark.css" />
     <Content Include="css\ui-themed.theme-light.css" />
+    <Content Include="pages\sign\hub.css" />
+    <Content Include="pages\sign\signInPage.css" />
     <Content Include="pages\sign\hub.html" />
     <Content Include="pages\sign\hub.js" />
     <Content Include="pages\sign\hubPhone.css" />
