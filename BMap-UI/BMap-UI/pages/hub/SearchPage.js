@@ -30,13 +30,8 @@
                     var res;
                     switch (searchresult) {
                         case '0':
-                            res = '<div>';
-                            res += name;
-                            res += '</div>';
-                            res += '<div>';
-                            res += $('#user').val();
-                            res += '</div><br />';
-                            res += '<form id="sendfr" action="POST"><input type="submit" value="Send Request" /></form>';
+                            document.getElementById("usernamedisp").innerHTML = name;
+                            document.getElementById("userdisp").innerHTML = $('#user').val();
                             break;
                         case '1':
                             res = "No such user found...";
