@@ -128,7 +128,7 @@ function getFriendsLocation() {
 
 getFriendsLocation();
 
-setInterval(function () {
+user.interval = setInterval(function () {
     getLoc();
     getFriendsLocation();
     
@@ -140,6 +140,7 @@ setInterval(function () {
     }
 
 }, 30000);
+
 
 getLoc();
 getLocation();

@@ -8,13 +8,12 @@
     <link href="/pages/hub/hubphone.css" rel="stylesheet" />
     <script src="/js/data.js"></script>
     <script src="/pages/hub/hub.js"></script>
-    <script src="/pages/hub/section4Page.js"></script>
     <script src="/pages/hub/RequestsPage.js"></script>
     <script src="/pages/hub/SearchPage.js"></script>
     <script src="/pages/hub/TrackerPage.js"></script>
     <script src="/pages/hub/FriendsPage.js"></script>
-    <script src="/pages/hub/section4Page.js"></script>
-
+    <script src="/pages/hub/SettingsPage.js"></script>
+    
     <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript//js/veapicore.js"></script>
     <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript//js/veapiModules.js"></script>
 
@@ -68,6 +67,16 @@
                     </div>
                 </div>
 
+
+                <div class="Settings section"
+                     data-win-control="WinJS.UI.PivotItem"
+                     data-win-options="{ isHeaderStatic: true }"
+                     data-win-res="{ winControl: {'header': 'Settings'} }">
+                    <div class="sectioncontrol"
+                         id="Settingscontenthost"
+                         data-win-control="HubApps_SectionControls.SettingsControl">
+                    </div>
+                </div>
 
             </div>
         </section>

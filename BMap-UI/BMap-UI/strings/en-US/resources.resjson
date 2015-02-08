@@ -28,6 +28,8 @@
 	"Requests": "Requests",
     "RequestsDescription": "",
 
+	"Settings": "Settings",
+    "SettingsDescription": "",
 
     "DescriptionText": "Lorem ipsum dolor sit amet:",
     "SectionSubtitle": "Section subtitle"
