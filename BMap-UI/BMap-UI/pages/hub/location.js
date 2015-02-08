@@ -89,12 +89,8 @@ function getStatusString(locStatus) {
     }
 }
 
-
-setInterval(function () {
-    getLoc();
-
-    /*
-    var x = domain + "/getlocs" ;
+function getFriendsLocation() {
+    var x = domain + "/getlocs";
     var posting = $.post(x);
     posting.done(function (data) {
 
@@ -108,7 +104,14 @@ setInterval(function () {
                 break;
         }
     });
-    */
+}
+
+setInterval(function () {
+    getLoc();
+
+    
+    
+    
     if (mapDetails.map) {
         mapDetails.updateMap();
         //mapDetails.map.setView({ center: new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long) });
