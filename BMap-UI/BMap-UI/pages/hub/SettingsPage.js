@@ -22,13 +22,14 @@
                         //Location of sign/hub file
                         clearInterval(user.interval);
                         user = {};
-                        mapDetails.map.dispose();
+                        if(mapDetails.map)
+                            mapDetails.map.dispose();
                         mapDetails = {};
                         var mapdiv = $('#mapDiv');
                         if (mapdiv) {
                             console.log('Sucesses' + mapdiv);
                             mapdiv.html('');
-                            console.log(mapDiv);
+                            
                         }
                         WinJS.Navigation.navigate('/pages/sign/hub.html');
                     }
@@ -38,13 +39,16 @@
                 });
             });
 
-            $("#logout").submit(function (event) {
+            $("#privacy").submit(function (event) {
                 event.preventDefault();
-                var x = domain + "/logout";
+                var x = domain + "/setprivacy";
 
-                var posting = $.post(x, '');
+                var posting = $.post(x, { 'privacy': $("input[type='radio'][name='privacy']:checked").val() });
+                console.log(x);
+                console.log('privacy=' + $("input[type='radio'][name='privacy']:checked").val());
                 posting.done(function (data) {
-                    WinJS.Navigation.navigate('/pages/sign/hub.html');
+                    console.log(data);
+                    WinJS.Navigation.navigate('/pages/hub/hub.html');
 
                 });
             });

@@ -27,7 +27,7 @@
                 username: $('#username').val(),
                 name: $('#name').val(),
                 password: $('#passwd').val(),
-                privacy: $('#privacy').val()
+                privacy: $("input[type='radio'][name='privacy']:checked").val()
             }
             console.log(d);
             var x = domain + "/signup";
