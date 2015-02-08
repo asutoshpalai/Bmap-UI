@@ -20,26 +20,48 @@
                 "click", linkClickHandler, false);
 
                  $("#signup").submit(function(event) {
-        event.preventDefault();
-        if ($('#cpass').val() == $('#pass').val()) {
+                     event.preventDefault();
+                     console.log($('#cpass').val() + "-- $$" + $('#passwd').val())
+        if ($('#cpass').val() == $('#passwd').val()) {
             var d = {
-                username: $('#user').val(),
+                username: $('#username').val(),
                 name: $('#name').val(),
-                password: $('#pass').val(),
+                password: $('#passwd').val(),
                 privacy: $('#privacy').val()
             }
+            console.log(d);
             var x = domain + "/signup";
             var posting = $.post(x, d);
             posting.done(function (data) {
                 var response = $.parseJSON(data);
-
+                console.log(data);
                 switch(response['result'])
                 {
                     case '0':
+                        x = domain + "/flist";
+                        var posting = $.post(x, '');
+                        posting.done(function (data) {
+                            var details = $.parseJSON(data);
+                            var check = details['result'];
+                            var privacy = response['privacy'];
+                            if (check == '0') {
+                                WinJS.Application.sessionState.frndlist = details;
+                            }
+                            else {
+                                WinJS.Application.sessionState.frndlist = 0;
+                            }
+                            user.people = details['people'];
+                        });
+                        user.userid = response['userid'];
+                        user.name = response['name'];
+                        user.privacy = response['privacy'];
+                        WinJS.Navigation.navigate('/pages/hub/hub.html');
                         break;
                     case '1':
+                        $("#error").html("Username already exist.");
                         break;
                     case '7':
+                        $("#error").html("Could not complete the Sign In process. Please try again later.");
                         break;
                 }
             });
@@ -48,7 +70,7 @@
             })
         }
         else {
-            $("#signup").append("Passwords don't match");
+            $("#passerror").html("Passwords don't match");
         }
     }) ;
 
