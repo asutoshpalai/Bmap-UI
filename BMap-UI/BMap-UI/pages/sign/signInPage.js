@@ -48,7 +48,7 @@
                                       WinJS.Application.sessionState.frndlist = details;
                                   }
                                   else {
-                                      WinJS.Application.sessionState.frndlist = 0;
+                                      WinJS.Application.sessionState.frndlist = null;
                                   }
                                   user.people = details['people'];
                               });
@@ -68,7 +68,7 @@
                                       WinJS.Application.sessionState.requestsr = detailsr;
                                   }
                                   else {
-                                      WinJS.Application.sessionState.requestsr = 0;
+                                      WinJS.Application.sessionState.requestsr =null;
                                   }
                                   //user.people = details['people'];
                               });

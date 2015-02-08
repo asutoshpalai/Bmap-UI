@@ -139,7 +139,7 @@ user.interval = setInterval(function () {
         //mapDetails.map.setView({ center: new Microsoft.Maps.Location(mapDetails.lat, mapDetails.long) });
     }
 
-}, 30000);
+}, 2000);
 
 
 getLoc();

@@ -13,8 +13,8 @@
             
             options = options || {};
             var frndlist = "";
-            console.log((WinJS.Application.sessionState.requestr) == 0);
-            if (WinJS.Application.sessionState.requestr==0) {
+            console.log((WinJS.Application.sessionState.requestr) == null);
+            if (WinJS.Application.sessionState.requestr) {
                 console.log("eeeeeee");
                 frndlist = "Sorry! Unable to fetch your friend requests.";
             }
@@ -24,7 +24,9 @@
                 var detailsr = WinJS.Application.sessionState.requestsr;
                 console.log("jjjjjjjjjjjjjj");
                 console.log(detailsr);
-                frndlist = '<div>';
+                if (detailsr.people.length == 0) frndlist = 'No Friend Requests.'
+                frndlist += '<div>';
+
                 for (var i = 0 ; i < detailsr.people.length ; i++) {
                     frndlist += '<div class="label-medium">';
                     frndlist += detailsr['people'][i]['name'];

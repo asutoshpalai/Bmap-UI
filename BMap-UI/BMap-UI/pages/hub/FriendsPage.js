@@ -8,18 +8,19 @@
         ready: function (element, options) {
             options = options || {};
             var frndlist = "";
-           if (WinJS.Application.sessionState.frndlist == "0") {
+           if (!user.people) {
                 frndlist = "Sorry! Unable to fetch your friendlist.";
             }
            else {
 
                
-               var details = WinJS.Application.sessionState.frndlist;
+               var details =user.people;
                console.log(details);
-                frndlist = '<div>';
+               if (user.people.length == 0) frndlist = 'No Friends.'
+                frndlist += '<div>';
                 for (var i = 0 ; i < user.people.length ; i++) {
                     frndlist += '<div class="label-medium">';
-                    frndlist += details['people'][i]['name'];
+                    frndlist += details[i]['name'];
                     frndlist += '</div>';
                     console.log(details);
                 }
