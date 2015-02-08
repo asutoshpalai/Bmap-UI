@@ -8,11 +8,19 @@
         ready: function (element, options) {
             options = options || {};
 
-
+            $('#searchresult').css('display', 'none');
             document.getElementById('finduser').onsubmit = null;
-            domain = "http://192.168.0.117";
+            document.getElementById('sendfr').onsubmit = function () {
+                event.preventDefault();
+                $('#searchresult').css('display', 'none');
+                $('#friendRequest').html("Freind Request Sent!!");
+            };
+
+
             $("#finduser").submit(function (event) {
                 event.preventDefault();
+                $('#friendRequest').html("");
+
                 var d = {
                     username: $('#user').val(),
 
@@ -21,6 +29,7 @@
                 var posting = $.post(x, d);
                 posting.done(function (data) {
 
+                    $('#searchresult').css('display', 'block');
                     console.log(data);
                     var result = $.parseJSON(data);
                     var searchresult = result['result'];
@@ -42,7 +51,7 @@
                         default:
                             res = "Sorry! Could not complete the search request...";
                     }
-                    $("#searchresult").append(res);
+                    $("#searchresult").html(res);
                 });
             });
         },
