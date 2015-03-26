@@ -4,16 +4,11 @@ This is a windows phone app which hepls to locate our friends and others who wan
 their location.
 This is a very simple and easy to use app.
 
-Main Features are:
-
+###Main Features are:
 1. In app sign in
-
 2. Setting your own privacy and changing it anytime you want!!
-
 3. Easy to use UI 
-
 4. Uses Bing Map API
-
 5. Code is in HTML and Javascript
 
 This app needs a online backend which is at :
